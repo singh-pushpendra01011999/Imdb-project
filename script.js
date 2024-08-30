@@ -10,7 +10,7 @@ async function popularMovie(){
   try{
     for(const term of searchMovie){
         
-      const response=await fetch(`http://www.omdbapi.com/?s=${term}&apikey=${apiKey}`);
+      const response=await fetch(`https://www.omdbapi.com/?s=${term}&apikey=${apiKey}`);
       
       const data= await response.json();
       if(data.Search){
@@ -105,7 +105,7 @@ async function popularMovie(){
               const searchWord = searchInput.value;
               if (searchWord) {
                   try {
-                      const response = await fetch(`http://www.omdbapi.com/?s=${searchWord}&apikey=e612bb26`);
+                      const response = await fetch(`https://www.omdbapi.com/?s=${searchWord}&apikey=e612bb26`);
                       const data1 = await response.json();
                       console.log(data1);
                       displaySearchData(data1);
